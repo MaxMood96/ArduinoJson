@@ -12,7 +12,7 @@ namespace ARDUINOJSON_NAMESPACE {
 // (we need to store the allocator before constructing JsonDocument)
 template <typename TAllocator>
 class AllocatorOwner {
- public:
+ protected:
   AllocatorOwner() {}
   AllocatorOwner(const AllocatorOwner& src) : _allocator(src._allocator) {}
   AllocatorOwner(TAllocator a) : _allocator(a) {}
